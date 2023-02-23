@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { toggleCart } from '../../redux/slice';
@@ -13,7 +12,7 @@ export const Cart = () => {
     const dispatch = useDispatch();
     
     return cartWindowStatus ? (
-        <section className={cn(styles.root)}>
+        <section className={styles.root}>
             <button onClick={() => dispatch(toggleCart())} className={styles.closeButton}>X</button>
             <section className={styles.content}>
                 {solars.map((solar: ISolar) => <CartSolar solar={solar} key={solar.name} />)}
