@@ -1,6 +1,6 @@
 import { ISolar } from './solar';
 
-interface IRedux {
+export interface IRedux {
     data: ISolar[],
     selected: number,
     selectedSolars: ISolar[],
